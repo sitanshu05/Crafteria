@@ -1,3 +1,10 @@
 export const ROUTES = {
-    LandingPage : "/"
+    LandingPage : "/",
+    Login : "/login",
+    SignUp : "/signup",
+    Products : "/products",
+    ProductPage : "/productpage",
+    account : "/account",
+    cart : "/cart",
+    addProduct : '/addproduct'
 }

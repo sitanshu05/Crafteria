@@ -17,7 +17,7 @@ const styles = {
 
 function Navbar(props) {
   return (
-    <div className={styles.container}>
+    <div className={styles.container + " " + props.classes}>
         <div className={styles.logo_div}>
             <Logo classes={styles.logo}/>
         </div>

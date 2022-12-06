@@ -9,14 +9,16 @@ module.exports = {
       colors : {
         'bg_light' : "rgba(209, 177, 116, 0.68)",
         'button_dark' : "rgba(56, 40, 26, 0.71)",
-        'bg_dark' : "rgba(138, 70, 11, 0.83)"
-      }
+        'bg_dark' : "rgba(138, 70, 11, 0.83)",
+        'bg_medium' : "#D1B174"
+      } 
     },
     fontFamily :{
       "header_font" : 'Libre Caslon Text'
     },
     backgroundImage :{
-      'bg_home' : "url('./src/assets/images/bg_home.png')"
+      'bg_home' : "url('./src/assets/images/bg_home.png')",
+      'bg_historical' : "url('./src/assets/images/landing_img2.png')"
     }
   },
   plugins: [],
