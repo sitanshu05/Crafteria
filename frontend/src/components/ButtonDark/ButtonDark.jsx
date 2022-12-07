@@ -6,7 +6,7 @@ const styles = {
 
 function ButtonDark(props) {
   return (
-    <button className={styles.button + " " + props.classes}>
+    <button className={styles.button + " " + props.classes} onClick={props.click}>
         {props.text}
     </button>
   )

@@ -1,14 +1,17 @@
 import React from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import CartItem from '../../components/CartItem/CartItem'
+import Footer from '../../components/Footer/Footer'
 
 function Cart() {
+
+
   return (
     <div class="container  mx-auto  bg-bg_dark text-white font-header_font">
       <Navbar />
       <div class="w-full overflow-x-auto pb-[3rem]">
         <div class="my-2">
-          <h3 class="text-xl font-bold tracking-wider">Shopping Cart 3 item</h3>
+          <h3 class="text-xl font-bold tracking-wider">Shopping Cart</h3>
         </div>
         <table class="w-full shadow-inner">
           <thead>
@@ -35,10 +38,10 @@ function Cart() {
             <tr>
               <td class="p-4 px-6 text-center whitespace-nowrap"></td>
               <td class="p-4 px-6 text-center whitespace-nowrap">
-                <div class="font-bold">Total Qty - 4</div>
+                <div class="font-bold">Total Qty - 3</div>
               </td>
               <td class="p-4 px-6 font-extrabold text-center whitespace-nowrap">
-                Total - 40,00 (include tax)
+                Total - 3100 (include tax)
               </td>
               <td class="p-4 px-6 text-center whitespace-nowrap">
                 <button class="px-4 py-1 text-red-600 bg-red-100">
@@ -72,6 +75,7 @@ function Cart() {
           </button>
         </div>
       </div>
+      <Footer />
     </div>
   )
 }

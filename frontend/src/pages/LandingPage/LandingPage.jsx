@@ -6,6 +6,7 @@ import Subtitle from '../../components/Subtitle/Subtitle'
 import ProductCard from '../../components/ProductCard/ProductCard'
 import data from '../../../tmp/products'
 import Footer from '../../components/Footer/Footer'
+import { useNavigate } from 'react-router-dom'
 
 const styles = {
     container: "bg-contain bg-bg_home flex flex-col items-center justify-start bg-no-repeat font-header_font text-white text-center",
@@ -24,6 +25,11 @@ const styles = {
 
 function LandingPage() {
 
+    const navigate = useNavigate()
+    const clickHandler = () =>{
+        navigate('/products')
+    }
+
     const featuredProducts = data.map(item => {
         return <ProductCard {...item} />
     })
@@ -35,7 +41,7 @@ function LandingPage() {
                     <h1>
                         The <p className={styles.text_highlight}>Aroma</p> of Indian Local <br></br> Crafts
                     </h1>
-                    <ButtonDark text="Shop Now" classes={styles.shop_button} />
+                    <ButtonDark text="Shop Now" classes={styles.shop_button} click = {clickHandler}/>
                 </div>
             </div>
             <Divider classes={styles.divider1} />

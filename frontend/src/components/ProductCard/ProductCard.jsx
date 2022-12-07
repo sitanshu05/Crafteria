@@ -1,4 +1,5 @@
 import React from 'react'
+import { useNavigate } from 'react-router-dom'
 
 const styles = {
     card: "h-[15rem] w-[20rem] bg-bg_dark p-[1rem] flex flex-col items-center justify-between rounded-[30px] text-xl text-white",
@@ -11,8 +12,16 @@ const styles = {
 }
 
 function ProductCard(props) {
+
+    const navigate = useNavigate()
+
+    const showProduct = () =>{
+        navigate("/productpage",{state : {
+                myProps : props
+            }})
+    }
     return (
-        <div className={styles.card}>
+        <div className={styles.card} onClick={showProduct}>
             <div className={styles.img_div}>
                 <img src={props.img} alt={props.alt} className={styles.image} />
             </div>

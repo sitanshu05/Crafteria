@@ -1,6 +1,10 @@
 const app = require('./app')
 const connectDatabase = require('./config/database')
+var cors = require('cors')
+const express = require('express')
 
+app.use(cors())
+app.use(express.json())
 const dotenv = require("dotenv")
 
 //handling uncaught exception

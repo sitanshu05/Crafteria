@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from '../../components/Navbar/Navbar'
 import Subtitle from '../../components/Subtitle/Subtitle'
 import ProductCard from '../../components/ProductCard/ProductCard'
+import Footer from '../../components/Footer/Footer'
 import data from '../../../tmp/products'
 
 const styles = {
@@ -27,6 +28,7 @@ function Products() {
             <div className={styles.body}>
                 {Products}
             </div>
+            <Footer />
         </div>
     )
 }

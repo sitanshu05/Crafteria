@@ -2,6 +2,7 @@ import React from 'react'
 import Logo from '../Logo/Logo'
 import {AiOutlineShoppingCart} from 'react-icons/ai'
 import {RiAccountCircleLine} from 'react-icons/ri'
+import { useNavigate } from "react-router-dom";
 
 const styles = {
     container : "bg-bg_light flex justify-between p-[1rem] w-full",
@@ -16,6 +17,15 @@ const styles = {
 }
 
 function Navbar(props) {
+
+    const navigate = useNavigate();
+
+    const openCart = () =>{
+        navigate("/cart")
+    }
+    const openAccount = () =>{
+        navigate("/login")
+    }
   return (
     <div className={styles.container + " " + props.classes}>
         <div className={styles.logo_div}>
@@ -41,12 +51,12 @@ function Navbar(props) {
                 <ul className={styles.icon_links}>
                     <li>
                         <a href="">
-                            <AiOutlineShoppingCart style = {{color: "white"}} size='2rem'/>
+                            <AiOutlineShoppingCart style = {{color: "white"}} size='2rem' onClick={openCart}/>
                         </a>
                     </li>
                     <li>
                         <a href="">
-                            <RiAccountCircleLine style = {{color: "white" }} size='2rem' />
+                            <RiAccountCircleLine style = {{color: "white" }} size='2rem'  onClick = {openAccount}/>
                         </a>
                     </li>
                 </ul>
