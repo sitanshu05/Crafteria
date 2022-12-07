@@ -7,7 +7,7 @@ const router = express.Router();
 router.route('/products').get(getAllProducts); //get request
 
 //new product
-router.route('/admin/product/new').post(isAuthenticatedUser, authorizeRoles("admin"), createProduct); //post request
+router.route('/admin/product/new').post(createProduct); //post request
 
 //update product or delete product use put request to update and delete request to delete and get request to get details of single product
 router.route('/admin/product/:id').put(isAuthenticatedUser, authorizeRoles("admin"), updateProduct).delete(isAuthenticatedUser, authorizeRoles("admin"), deleteProduct);

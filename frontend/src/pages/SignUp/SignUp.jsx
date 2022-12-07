@@ -14,6 +14,7 @@ const styles = {
     input: "h-[2rem]"
 
 }
+let artists = []
 function SignUp() {
 
     const navigate = useNavigate()
@@ -42,14 +43,27 @@ function SignUp() {
         await axios.post("http://localhost:4000/api/v1/register", {
             name : signUpDetails.name,
             email: signUpDetails.email,
-            password: signUpDetails.password
+            password: signUpDetails.password,
+            role : signUpDetails.artist ? "admin" : "user"
         }).then(res => {
             console.log(res);
             console.log(res.data);
-            navigate("/");
+            artists.push(signUpDetails.email);
+
+            navigate("/account",{state : {
+                myProps : {
+                    name : signUpDetails.name,
+                    email : signUpDetails.email,
+                    role : signUpDetails.artist ? "admin" : "user"
+                }
+            }})
         }).catch(err => {
             alert(err);
         })
+    }
+
+    const Artists = () =>{
+        return artists
     }
     return (
         <div className={styles.container}>

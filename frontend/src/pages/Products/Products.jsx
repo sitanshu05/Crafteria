@@ -3,7 +3,7 @@ import Navbar from '../../components/Navbar/Navbar'
 import Subtitle from '../../components/Subtitle/Subtitle'
 import ProductCard from '../../components/ProductCard/ProductCard'
 import Footer from '../../components/Footer/Footer'
-import data from '../../../tmp/products'
+import data from '../../../tmp/image'
 
 const styles = {
     container : "bg-bg_medium",

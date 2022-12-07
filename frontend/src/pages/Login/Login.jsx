@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Logo from '../../components/Logo/Logo'
 import TextField1 from '../../components/TextField1/TextField1'
 import axios from 'axios'
+import admins from '../../../tmp/admin'
 import { useNavigate } from "react-router-dom";
 
 const styles = {
@@ -37,6 +38,7 @@ function Login() {
     }
     const checkCredentials = async (event) => {
         event.preventDefault()
+        console.log(admins,loginDetails)
 
         await axios.post("http://localhost:4000/api/v1/login", {
             email: loginDetails.email,
@@ -44,7 +46,18 @@ function Login() {
         }).then(res => {
             console.log(res);
             console.log(res.data);
-            navigate("/");
+
+            if(loginDetails.email === "admin7@gmail.com"){
+                navigate("/account",{state : {
+                    myProps : {
+                        name : "seller1",
+                        email : loginDetails.email,
+                        role :  "admin" 
+                    }
+                }})
+            }else{
+                navigate('/')
+            }
         }).catch(err => {
             alert(err);
         })

@@ -40,7 +40,7 @@ function Navbar(props) {
                     <a href="">Decorations</a>
                 </li>
                 <li className={styles.link}>
-                    <a href="">Artists</a>
+                    <a href="/account">Account</a>
                 </li>
                 <li className={styles.link}>
                     <a href="">About Us</a>

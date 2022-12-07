@@ -9,6 +9,7 @@ import ProductPage from '../pages/ProductPage/ProductPage'
 import Account from '../pages/Account/Account'
 import Cart from '../pages/Cart/Cart'
 import AddProduct from '../pages/AddProduct/AddProduct'
+import Checkout from '../pages/Checkout/Checkout'
 
 const Router = () => {
 
@@ -31,6 +32,7 @@ const Router = () => {
                 <Route exact path ={ROUTES.account} element = {<RouteWithRole Element={Account} />}></Route>
                 <Route exact path ={ROUTES.cart} element = {<RouteWithRole Element={Cart} />}></Route>
                 <Route exact path ={ROUTES.addProduct} element = {<RouteWithRole Element={AddProduct} />}></Route>
+                <Route exact path ={ROUTES.checkout} element = {<RouteWithRole Element={Checkout} />}></Route>
             </Routes>
         </div>
     )

@@ -6,5 +6,6 @@ export const ROUTES = {
     ProductPage : "/productpage",
     account : "/account",
     cart : "/cart",
-    addProduct : '/addproduct'
+    addProduct : '/addproduct',
+    checkout : '/checkout'
 }
